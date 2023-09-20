@@ -9,7 +9,12 @@ __pycache__
 *.pyc 
 # C extensions
 *.so
-
+# Folder + query
+media_root/
+bs4/
+\jquery.min.js
+/images
+fontawesome-free/
 # Distribution / packaging
 .Python
 build/

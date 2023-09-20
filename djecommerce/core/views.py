@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
-
-def index(request):
-    return HttpResponse("Welcome to my shop")
+from .models import Category
+# Home Page
+def home(request):
+    return render(request, 'index.html')
+# Category
+def category_list(request):
+    data = Category.objects.all().order_by('-id')
+    return render(request, 'category_list.html', {'data':data})
